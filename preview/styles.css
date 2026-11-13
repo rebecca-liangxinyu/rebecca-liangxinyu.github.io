@@ -115,3 +115,77 @@ h2 {
   font-family: var(--font-head); font-weight: 600; font-size: 15px;
   letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-2);
 }
+
+/* ---------- Timeline ---------- */
+.tl { list-style: none; margin: 0; padding: 0; }
+.arc { display: grid; grid-template-columns: 2px 6px minmax(0, 1fr); column-gap: 10px; }
+.grind-line { background: transparent; }
+.arc.has-grind .grind-line { background: var(--grind); }
+.arc-bar { border-radius: 3px; margin: 4px 0; }
+.arc-body { margin: 4px 0 4px 4px; padding: 14px 16px; border-radius: 12px; }
+.arc-1 .arc-bar { background: var(--arc1); } .arc-1 .arc-body { background: var(--arc1-bg); }
+.arc-2 .arc-bar { background: var(--arc2); } .arc-2 .arc-body { background: var(--arc2-bg); }
+.arc-3 .arc-bar { background: var(--arc3); }
+.arc-4 .arc-bar { background: var(--arc4); } .arc-4 .arc-body { background: var(--arc4-bg); }
+.arc-5 .arc-bar { background: var(--arc5); } .arc-5 .arc-body { background: var(--arc5-bg); }
+
+.arc-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; margin-bottom: 6px; }
+h3 { margin: 0; font-family: var(--font-head); font-weight: 600; font-size: 18px; line-height: 1.3; }
+.arc-years { color: var(--text-2); font-size: 14px; }
+
+.roles { list-style: none; margin: 0; padding: 0; }
+.role-item + .role-item { border-top: 1px solid rgba(22, 24, 29, 0.1); }
+.role {
+  display: flex; align-items: center; gap: 12px; width: 100%; min-height: 48px;
+  padding: 8px 0; border: 0; background: none; text-align: left; cursor: pointer;
+  font: inherit; color: var(--text);
+}
+.role-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.role-org { font-weight: 600; font-size: 15px; }
+.role-title { font-size: 14px; color: var(--text-2); }
+.role-dates { font-size: 14px; color: var(--text-2); white-space: nowrap; }
+.chev {
+  width: 9px; height: 9px; flex: none; margin-right: 4px;
+  border-right: 2px solid var(--text-2); border-bottom: 2px solid var(--text-2);
+  transform: rotate(45deg); transition: transform 0.15s;
+}
+.role[aria-expanded="true"] .chev { transform: rotate(-135deg); }
+.role:hover .role-org { color: var(--hover); }
+.role-card { padding: 0 24px 12px 0; font-size: 15px; }
+.role-card ul { margin: 0; padding-left: 18px; }
+.role-card li + li { margin-top: 4px; }
+.role-place { margin: 0 0 6px; font-size: 13px; color: var(--text-2); }
+
+.grind-legend { display: grid; grid-template-columns: 2px minmax(0, 1fr); column-gap: 20px; margin-top: 14px; padding-top: 4px; }
+.grind-swatch { background: var(--grind); border-radius: 1px; margin: 10px 0; }
+.hint { margin: 12px 0 0; font-size: 14px; color: var(--text-2); }
+
+/* ---------- Case studies ---------- */
+.case-card { border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.case-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.case-tag { font-size: 13px; font-weight: 600; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.04em; }
+.soon { font-size: 13px; padding: 3px 10px; border-radius: 999px; background: #eef0f3; color: var(--text-2); }
+.case-card p { margin: 6px 0 0; color: var(--text-2); font-size: 15px; }
+
+/* ---------- Skills ---------- */
+.skill-row { padding: 14px 0; border-top: 1px solid var(--line); }
+.skill-row:first-child { border-top: 0; padding-top: 0; }
+.skill-row h3 { font-size: 16px; margin-bottom: 10px; }
+.tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { font-size: 14px; padding: 5px 12px; border-radius: 999px; background: #f2f4f7; }
+
+/* ---------- Education ---------- */
+.edu { padding: 14px 0; border-top: 1px solid var(--line); }
+.edu:first-child { border-top: 0; padding-top: 0; }
+.edu-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 16px; }
+.edu-degree { margin: 2px 0 0; color: var(--text-2); font-size: 15px; }
+.edu-date { color: var(--text-2); font-size: 14px; }
+.edu ul { margin: 8px 0 0; padding-left: 18px; font-size: 15px; }
+.edu li + li { margin-top: 3px; }
+
+@media (max-width: 600px) {
+  .role { flex-wrap: wrap; row-gap: 0; }
+  .role-main { flex-basis: calc(100% - 30px); }
+  .role-dates { order: 3; flex-basis: 100%; font-size: 13px; }
+  .arc-body { padding: 12px; }
+}
