@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rebecca Liang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top">Rebecca Liang</a>
+    <nav aria-label="Main">
+      <ul class="menu">
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#case-studies">Case studies</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume" class="js-resume">Resume</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap" id="top">
+    <h1>[Your headline goes here]</h1>
+    <p class="intro">[Two-sentence intro goes here. It will differ on the finance and go-to-market versions.]</p>
+    <div class="actions" id="resume">
+      <span class="btn btn-primary is-disabled" aria-disabled="true">Resume (coming soon)</span>
+      <a class="btn" href="https://www.linkedin.com/in/rebecca-liangxinyu/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn js-email" href="#">Email</a>
+    </div>
+  </section>
+
+  <section class="section wrap" id="timeline">
+    <h2>Career timeline</h2>
+    <div class="placeholder">The interactive timeline goes here.</div>
+  </section>
+
+  <section class="section wrap" id="case-studies">
+    <h2>Case studies</h2>
+    <div class="cards">
+      <div class="placeholder">Finance case study. Coming soon.</div>
+      <div class="placeholder">Go-to-market case study. Coming soon.</div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="skills">
+    <h2>Skills</h2>
+    <div class="placeholder">The skills matrix goes here.</div>
+  </section>
+
+  <section class="section wrap" id="education">
+    <h2>Education and honors</h2>
+    <div class="placeholder">Education and honors go here.</div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>Rebecca Liang · New York, NY</span>
+    <ul class="menu">
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/rebecca-liangxinyu/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a class="js-email" href="#">Email</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // The address is assembled here so it is not sitting in the page for spam scrapers.
+  (function () {
+    var user = "XL3209", host = "columbia.edu";
+    document.querySelectorAll(".js-email").forEach(function (a) {
+      a.href = "mailto:" + user + "@" + host;
+    });
+  })();
+</script>
+</body>
+</html>
